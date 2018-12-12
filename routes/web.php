@@ -16,4 +16,7 @@ Auth::routes();
 Route::group(['middleware' => ['auth', 'acl']], function () {
   Route::view('/', 'framework::home');
   Route::view('/home', 'framework::home');
+
+  Route::resource('sindicatos', 'SindicatoController');
 });
+

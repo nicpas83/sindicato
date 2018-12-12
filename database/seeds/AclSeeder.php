@@ -25,6 +25,7 @@ class AclSeeder extends Seeder
             ['right_id' => 1, 'controller' => 'Eideos\Framework\Controllers\RoleController', 'action' => '*'],
             ['right_id' => 1, 'controller' => 'Eideos\Framework\Controllers\RightController', 'action' => '*'],
             ['right_id' => 1, 'controller' => 'Eideos\Framework\Controllers\ButtonController', 'action' => '*'],
+            ['right_id' => 1, 'controller' => 'App\Http\Controllers\SindicatoController', 'action' => '*'],
         ]);
         DB::table('roles_rights')->insert([
             ['role_id' => 1, 'right_id' => 1],
