@@ -1,0 +1,17 @@
+<Block>
+    <search_list file="BlockSL.php" >
+        <actions>
+            <action label="Eliminar" controller="Block" action="destroy" op="D" icon="trash" class="btn-danger" />
+        </actions>
+        <searchfield name="user_id" label="Usuario" presentation="select" model="Eideos\Framework\User" displayField="firstname" cols="4" />
+        <searchfield name="model" label="Modelo" presentation="text" cols="4" />
+        <searchfield name="model_id" label="ID de Modelo" presentation="text" cols="2" />
+        <searchfield name="session_id" label="ID de Sesión" presentation="text" cols="12" />
+
+        <listfield name="id" label="ID" presentation="text" />
+        <listfield name="user__email" label="Usuario" presentation="text" />
+        <listfield name="session_id" label="ID de Sesión" presentation="text" />
+        <listfield name="model" label="Modelo" presentation="text" />
+        <listfield name="model_id" label="ID de Modelo" presentation="text" />
+    </search_list>
+</Block>

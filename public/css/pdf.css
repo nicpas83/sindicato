@@ -1,0 +1,45 @@
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+html {
+    position: relative;
+    height: 100%;
+}
+body {
+    margin: 0 0 100px;
+    /* bottom = footer height */
+    padding: 40px;
+}
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+}
+.sign-square {
+    /*    position: absolute;*/
+    float: left;
+    margin-left: 2px;
+    height: 120px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    border: 2px solid #000000;
+}
+.sign-description {
+    font-size:10px;
+    position:absolute;
+    width:100%;
+    margin-top: 70px;
+    text-align:center;
+}
+.sign{
+    /*    position: absolute;*/
+    float: left;
+    margin-left: 2px;
+}

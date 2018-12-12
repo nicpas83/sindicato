@@ -1,0 +1,24 @@
+<Role>
+
+    <search_list file="RoleSL.php">
+        <searchfield name="name" label="Nombre" presentation="text" cols="6" />
+        <searchfield name="description" label="Descripción" presentation="text" cols="6" />
+
+        <listfield name="id" label="ID" presentation="text" />
+        <listfield name="name" label="Nombre" presentation="text" />
+        <listfield name="description" label="Descripción" presentation="text" />
+    </search_list>
+
+    <tablemaint file="RoleMaint.php">
+        <tab label="Rol" id="user">
+            <fieldset>
+                <field name="name" label="Nombre" presentation="text" cols="4" />
+                <field name="description" label="Descripción" presentation="text" cols="8" />
+            </fieldset>
+            <table label="Derechos" paginate="true" model="Right" popup="true" assoc="true" orderby="Right.name ASC">
+                <field name="id" label="Derecho" presentation="select" model="Eideos\Framework\Right" displayField="name" />
+            </table>
+        </tab>
+    </tablemaint>
+
+</Role>

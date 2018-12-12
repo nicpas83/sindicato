@@ -1,0 +1,25 @@
+<Right>
+    
+    <search_list file="RightSL.php">
+        <searchfield name="name" label="Nombre" presentation="text" cols="6" />
+        <searchfield name="description" label="Descripción" presentation="text" cols="6" />
+        
+        <listfield name="id" label="ID" presentation="text" />
+        <listfield name="name" label="Nombre" presentation="text" />
+        <listfield name="description" label="Descripción" presentation="text" />
+    </search_list>
+    
+    <tablemaint file="RightMaint.php"> 
+        <tab label="Derecho" id="user">
+            <fieldset>
+                <field name="name" label="Nombre" presentation="text" cols="6" />
+                <field name="description" label="Apellido" presentation="text" cols="6" />
+            </fieldset>
+            <table label="Permisos" paginate="true" model="Permission" popup="true" orderby="Permission.name ASC">            
+                <field name="controller" label="Controlador" presentation="text" />
+                <field name="action" label="Acción" presentation="text" />
+            </table>
+        </tab>
+    </tablemaint>
+    
+</Right>

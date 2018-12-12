@@ -1,0 +1,30 @@
+<Button>
+
+    <search_list file="ButtonSL.php">
+        <searchfield name="name" label="Nombre" presentation="text" cols="6" />
+        <searchfield name="order" label="Orden" presentation="text" cols="4" />
+        <searchfield name="active" label="Descripción" presentation="active" cols="2" />
+
+        <listfield name="id" label="ID" presentation="text" />
+        <listfield name="name" label="Nombre" presentation="text" />
+        <listfield name="order" label="Orden" presentation="text" />
+        <listfield name="active" label="Activo" presentation="active" />
+    </search_list>
+
+    <tablemaint file="ButtonMaint.php">
+        <tab label="Botón" id="user">
+            <fieldset label="Botón">
+                <field name="name" label="Nombre" presentation="text" cols="9" />
+                <field name="active" label="Activo" presentation="active" cols="3" />
+                <field name="controller" label="Controller" presentation="text" cols="6"/>
+                <field name="action" label="Acción" presentation="text" cols="6" />
+                <field name="color" label="Color" presentation="text" cols="4"/>
+                <field name="icon" label="Icono" presentation="text" cols="4"/>
+                <field name="order" label="Orden" presentation="text" cols="4"/>
+                <field name="refresh" label="Refresco" presentation="active" cols="3"/>
+                <field name="query" label="Query" presentation="textarea" rows="3" cols="9"/>
+            </fieldset>
+        </tab>
+    </tablemaint>
+
+</Button>

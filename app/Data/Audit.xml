@@ -1,0 +1,22 @@
+<Audit>
+    <search_list file="AuditSL.php">
+        <actions>
+        </actions>
+
+        <searchfield name="created_at" label="Fecha" presentation="date" cols="4" />
+        <searchfield name="user_id" label="Usuario" presentation="select" model="Eideos\Framework\User" displayField="firstname" cols="4" />
+        <searchfield name="ip_address" label="IP" presentation="text" cols="4" />
+        <searchfield name="event" label="Evento" presentation="text" cols="4" />
+        <searchfield name="auditable_type" label="Modelo" presentation="text" cols="4" />
+        <searchfield name="auditable_id" label="Modelo ID" presentation="text" cols="4" />
+
+        <listfield name="id" label="ID" presentation="text" />
+        <listfield name="created_at" label="Usuario" presentation="date" />
+        <listfield name="user__email" label="Usuario" presentation="text" />
+        <listfield name="user_id" label="Usuario ID" presentation="text" />
+        <listfield name="ip_address" label="IP" presentation="text" />
+        <listfield name="event" label="Evento" presentation="text" />
+        <listfield name="auditable_type" label="Modelo" presentation="text" />
+        <listfield name="auditable_id" label="Modelo ID" presentation="text" />
+    </search_list>
+</Audit>
