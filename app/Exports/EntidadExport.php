@@ -4,7 +4,7 @@ namespace App\Exports;
 
 use Eideos\Framework\Lib\Export;
 
-class SindicatoExport extends Export {
+class EntidadExport extends Export {
 
     public function map($modelBuilder): array {
         return [

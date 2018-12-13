@@ -21,37 +21,71 @@
         
     </search_list>
 
-    <tablemaint file="EntidadMaint.php">
-        <tab label="Institucional" id="institucional">
-            <fieldset label="Datos Principales" cols="8">
-                <field name="nombre" label="Nombre o Sindicato" presentation="text" cols="12" />
-                <field name="legajo" label="Legajo" presentation="text" cols="3" />
-                <field name="fecha_constitucion" label="Fecha Constitución" presentation="date" cols="3" />
-                <field name="telefono" label="Teléfono" presentation="INT" actions="A|E" cols="6" />
-                <field name="cuit" label="Confirme Contraseña" presentation="PASSWORD" actions="A|E" cols="6" />
-            </fieldset>
-            <fieldset label="Estado" cols="4">
-                <field name="grado" label="Grado" presentation="text" actions="A|E"  />
-                <field name="estado" label="Estado" presentation="text" actions="A|E" />
-            </fieldset>
-                            
-            <fieldset label="Ubicación">
-                <field name="domicilio_real" label="Domicilio Real" presentation="PASSWORD" actions="A|E" cols="6" />
-                <field name="domicilio_legal" label="Domicilio Legal" presentation="PASSWORD" actions="A|E" cols="6" />
-            </fieldset>
 
+    <tablemaint file="EntidadMaint.php">
+        
+        <tab label="Institucional" id="institucional">
+            <fieldset label="Datos Principales" >
+                <field name="nombre" label="Nombre o Sindicato" presentation="text" cols="4" />
+                <field name="tipo_actividad" label="Tipo Actividad" presentation="select" actions="A|E" cols="4" />
+                <field name="cuit" label="CUIT" presentation="text" actions="A|E" cols="4" />
+                <field name="legajo" label="Legajo" presentation="text" cols="4" />
+                <field name="fecha_constitucion" label="Fecha Constitución" presentation="date" cols="4" />
+                <field name="cuota_sindical" label="Cuota Sindical" presentation="text" actions="A|E" cols="4" />
+            </fieldset>
+            <fieldset label="Registo" >
+                <field name="registro" label="Registro" presentation="text" actions="A|E" cols="4" />
+                <field name="registro_nro" label="Número" presentation="text" actions="A|E" cols="4" />           
+                <field name="resolucion" label="Resolución" presentation="text" actions="A|E" cols="4"/>
+                <field name="resolucion_fecha" label="Fecha" presentation="date" actions="A|E" cols="4"/>
+                <field name="resolucion_tipo" label="Resolución Tipo" presentation="text" actions="A|E" cols="4"/>
+                <field name="boletin_oficial" label="Boletín Oficial" presentation="text" actions="A|E" cols="4"/>
+            </fieldset>         
+            <fieldset label="Estado">
+                <field name="grado" label="Grado" presentation="text" actions="A|E" cols="6" />
+                <field name="estado" label="Estado" presentation="text" actions="A|E" cols="6"/>
+                <field name="conciliaciones" label="Conciliaciones" presentation="text" actions="A|E" cols="6" />
+                <field name="legalizacion" label="Legalizacion" presentation="text" actions="A|E" cols="6" />
+            </fieldset>         
         </tab>
-        <tab label="Registro" id="registro">
-            <table label="Roles" paginate="true" model="Role" popup="true" assoc="true" orderby="Role.name ASC">
-                <field name="id" label="Rol" presentation="select" model="Eideos\Framework\Role" displayField="name" />
-            </table>
+        
+        <tab label="Contacto" id="general">       
+            <fieldset label="General">
+                <field name="telefono" label="Teléfono" presentation="text" actions="A|E" cols="4" />
+                <field name="email_principal" label="Email Principal" presentation="text" actions="A|E" cols="4" />
+                <field name="email_secundario" label="Email Secundario" presentation="text" actions="A|E" cols="4" />
+                <field name="pagina_web" label="Página WEB" presentation="text" actions="A|E" cols="4" />
+                <field name="redes_sociales" label="Redes Sociales" presentation="text" actions="A|E" cols="4" />
+                <field name="otros_contactos" label="Otros" presentation="textarea" actions="A|E" cols="4" />
+            </fieldset>
+            
+            <fieldset label="Ubicación">
+                <field name="domicilio_real" label="Domicilio Real" presentation="text" actions="A|E" cols="6" />
+                <field name="domicilio_legal" label="Domicilio Legal" presentation="text" actions="A|E" cols="6" />        
+            </fieldset>     
         </tab>
+        
+        <tab label="Salud" id="salud">       
+            <fieldset label="Obra Social">
+                <field name="obra_social" label="Obra Social" presentation="text" actions="A|E" cols="12" />
+            </fieldset>
+            <table label="Mutuales" paginate="true" model="Mutual" popup="true" assoc="true" orderby="Mutual.name ASC">
+                <field name="id" label="Nombre" presentation="select" model="App\Mutual" displayField="nombre" />
+            </table>        
+        </tab>
+        
         <tab label="Estatutos Aprobados" id="estatutos_aprobados">
-            <table label="Roles" paginate="true" model="Role" popup="true" assoc="true" orderby="Role.name ASC">
-                <field name="id" label="Rol" presentation="select" model="Eideos\Framework\Role" displayField="name" />
+            
+            <table label="Estatutos" paginate="true" model="Estatuto" popup="true" orderby="Estatuto.fecha DESC">
+                <field name="resolucion" label="Rol" presentation="text" />
+                <field name="fecha" label="Rol" presentation="date" />
+                <field name="tipo" label="Rol" presentation="select" />
+                <field name="publicacion" label="Publicación B.O." presentation="date" />
+                <field name="actualizacion" label="Actualizacion" presentation="select" />
             </table>
         </tab>
-        <tab label="Más información" id="estatutos_aprobados">
+        
+        <tab label="Más información" id="in">
             <table label="Roles" paginate="true" model="Role" popup="true" assoc="true" orderby="Role.name ASC">
                 <field name="id" label="Rol" presentation="select" model="Eideos\Framework\Role" displayField="name" />
             </table>
