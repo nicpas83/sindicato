@@ -9,8 +9,8 @@
 
         <!-- Columnas -->
         <listfield name="nombre" label="Nombre o Sindicato" presentation="text" />
-        <listfield name="legajo" label="Apellido" presentation="text" />
-        <listfield name="fecha_constitucion" label="Email" presentation="date" />
+        <listfield name="legajo" label="Legajo" presentation="text" />
+        <listfield name="fecha_constitucion" label="Constituído" presentation="date" />
         <listfield name="localidad" label="Activo" presentation="active" />
         <listfield name="provincia" label="Activo" presentation="active" />
         <listfield name="domicilio_real" label="Activo" presentation="active" />
