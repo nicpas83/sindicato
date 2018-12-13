@@ -1,0 +1,74 @@
+<Entidad>
+
+    <search_list file="EntidadSL.php">
+        <!-- Filtros -->
+        <searchfield name="firstname" label="Nombre" presentation="text" cols="6" />
+        <searchfield name="lastname" label="Apellido" presentation="text" cols="6" />
+        <searchfield name="email" label="Email" presentation="text" cols="10" />
+        <searchfield name="active" label="Activo" presentation="active" cols="2" />
+
+        <!-- Columnas -->
+        <listfield name="nombre" label="Nombre o Entidad" presentation="text" />
+        <listfield name="legajo" label="Apellido" presentation="text" />
+        <listfield name="fecha_constitucion" label="Email" presentation="date" />
+        <listfield name="localidad" label="Activo" presentation="active" />
+        <listfield name="provincia" label="Activo" presentation="active" />
+        <listfield name="domicilio_real" label="Activo" presentation="active" />
+        <listfield name="telefono" label="Activo" presentation="active" />
+        <listfield name="cuit" label="Activo" presentation="active" />
+        <listfield name="grado" label="Activo" presentation="active" />
+        <listfield name="estado" label="Activo" presentation="active" />
+        
+    </search_list>
+
+    <tablemaint file="EntidadMaint.php">
+        <tab label="Institucional" id="institucional">
+            <fieldset label="Datos Principales" cols="8">
+                <field name="nombre" label="Nombre o Sindicato" presentation="text" cols="12" />
+                <field name="legajo" label="Legajo" presentation="text" cols="3" />
+                <field name="fecha_constitucion" label="Fecha Constitución" presentation="date" cols="3" />
+                <field name="telefono" label="Teléfono" presentation="INT" actions="A|E" cols="6" />
+                <field name="cuit" label="Confirme Contraseña" presentation="PASSWORD" actions="A|E" cols="6" />
+            </fieldset>
+            <fieldset label="Estado" cols="4">
+                <field name="grado" label="Grado" presentation="text" actions="A|E"  />
+                <field name="estado" label="Estado" presentation="text" actions="A|E" />
+            </fieldset>
+                            
+            <fieldset label="Ubicación">
+                <field name="domicilio_real" label="Domicilio Real" presentation="PASSWORD" actions="A|E" cols="6" />
+                <field name="domicilio_legal" label="Domicilio Legal" presentation="PASSWORD" actions="A|E" cols="6" />
+            </fieldset>
+
+        </tab>
+        <tab label="Registro" id="registro">
+            <table label="Roles" paginate="true" model="Role" popup="true" assoc="true" orderby="Role.name ASC">
+                <field name="id" label="Rol" presentation="select" model="Eideos\Framework\Role" displayField="name" />
+            </table>
+        </tab>
+        <tab label="Estatutos Aprobados" id="estatutos_aprobados">
+            <table label="Roles" paginate="true" model="Role" popup="true" assoc="true" orderby="Role.name ASC">
+                <field name="id" label="Rol" presentation="select" model="Eideos\Framework\Role" displayField="name" />
+            </table>
+        </tab>
+        <tab label="Más información" id="estatutos_aprobados">
+            <table label="Roles" paginate="true" model="Role" popup="true" assoc="true" orderby="Role.name ASC">
+                <field name="id" label="Rol" presentation="select" model="Eideos\Framework\Role" displayField="name" />
+            </table>
+        </tab>
+    </tablemaint>
+
+    <tablemaint file="EntidadPersonalMaint.php">
+        <tab label="Usuario" id="user">
+            <fieldset>
+                <field name="firstname" label="Nombre" presentation="text" cols="4" />
+                <field name="lastname" label="Apellido" presentation="text" cols="4" />
+                <field name="email" label="Email" presentation="text" cols="4" />
+                <field name="active" label="Activo" isvisible="false" presentation="active" cols="2" />
+                <field name="password" label="Contraseña" presentation="PASSWORD" actions="A|E" cols="6" note="Se mantiene la actual si se deja vacío." />
+                <field name="password_confirmation" label="Confirme Contraseña" presentation="PASSWORD" actions="A|E" cols="6" />
+            </fieldset>
+        </tab>
+    </tablemaint>
+
+</Entidad>

@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class SindicatoController extends AppController
+class EntidadController extends AppController
 {
-    protected $model = "App\Sindicato";
-    protected $url = "sindicatos";
+    protected $model = "App\Entidad";
+    protected $url = "entidades";
     
     protected $rules = [
       'nombre' => 'required',
@@ -15,61 +15,61 @@ class SindicatoController extends AppController
 
     public function index(Request $request)
     {
-        $this->bladeVars["title"] = "Sindicatos";
+        $this->bladeVars["title"] = "Entidades";
         $this->bladeVars["breadcrumb"] = [
-          ["label" => "Sindicatos", "active" => true],
+          ["label" => "Entidades", "active" => true],
         ];
-        $this->slfile = "Sindicato.SindicatoSL";
+        $this->slfile = "Entidad.EntidadSL";
         return parent::index($request);
     }
 
     public function create()
     {
-        $this->bladeVars["title"] = "Nuevo Sindicato";
+        $this->bladeVars["title"] = "Nueva Entidad";
         $this->bladeVars["breadcrumb"] = [
-            ["label" => "Sindicatos", "url" => "/sindicatos"],
-            ["label" => "Nuevo Sindicato", "active" => true],
+            ["label" => "Entidades", "url" => "/entidades"],
+            ["label" => "Nueva Entidad", "active" => true],
         ];
-        $this->maintfile = "Sindicato.SindicatoMaint";
+        $this->maintfile = "Entidad.EntidadMaint";
         return parent::create();
     }
 
     public function edit(Request $request, $id)
     {
-        $this->bladeVars["title"] = "Modificar Descriptor";
+        $this->bladeVars["title"] = "Modificar Entidad";
         $this->bladeVars["breadcrumb"] = [
           ["label" => "Administración"],
           ["label" => "Administración del Módulo"],
-            ["label" => "Descriptores", "url" => "/descriptores"],
-            ["label" => "Modificar Descriptor", "active" => true],
+            ["label" => "Entidades", "url" => "/entidades"],
+            ["label" => "Modificar Entidad", "active" => true],
         ];
-        $this->maintfile = "Descriptor.DescriptorMaint";
+        $this->maintfile = "Entidad.EntidadMaint";
         return parent::edit($request, $id);
     }
 
     public function show(Request $request, $id)
     {
-        $this->bladeVars["title"] = "Visualizar Descriptor";
+        $this->bladeVars["title"] = "Visualizar Entidad";
         $this->bladeVars["breadcrumb"] = [
           ["label" => "Administración"],
           ["label" => "Administración del Módulo"],
-            ["label" => "Descriptores", "url" => "/descriptores"],
-            ["label" => "Visualizar Descriptor", "active" => true],
+            ["label" => "Entidades", "url" => "/descriptores"],
+            ["label" => "Visualizar Entidad", "active" => true],
         ];
-        $this->maintfile = "Descriptor.DescriptorMaint";
+        $this->maintfile = "Entidad.EntidadMaint";
         return parent::show($request, $id);
     }
 
     public function destroy($id)
     {
-        $this->successMessage = 'Sindicato eliminado correctamente.';
+        $this->successMessage = 'Entidad eliminado correctamente.';
         $this->errorMessage = 'El sindicato no pudo eliminarse ya que tiene registros asociados.';
         return parent::destroy($id);
     }
 
     public function export(Request $request, $type)
     {
-        $this->slfile = "Descriptor.DescriptorSL";
+        $this->slfile = "Entidad.EntidadSL";
         return parent::export($request, $type);
     }
 }

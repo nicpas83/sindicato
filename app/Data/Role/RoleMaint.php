@@ -4,6 +4,8 @@
 
 namespace App\Data;
 
+use Eideos\Framework\Lib\AbstractData;
+
 class RoleMaint extends AbstractData {
 
 protected $data = array (
@@ -48,7 +50,7 @@ protected $data = array (
                             'name' => 'id',
                             'label' => 'Derecho',
                             'presentation' => 'select',
-                            'model' => 'Eideos\\Framework\\Right',
+                            'model' => 'Eideos__Framework__Right',
                             'displayField' => 'name',
                         ),
                     ),

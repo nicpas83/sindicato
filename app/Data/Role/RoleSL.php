@@ -4,6 +4,8 @@
 
 namespace App\Data;
 
+use Eideos\Framework\Lib\AbstractData;
+
 class RoleSL extends AbstractData {
 
 protected $data = array (
