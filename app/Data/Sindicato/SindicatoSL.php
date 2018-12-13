@@ -6,7 +6,7 @@ namespace App\Data;
 
 use Eideos\Framework\Lib\AbstractData;
 
-class EntidadSL extends AbstractData {
+class SindicatoSL extends AbstractData {
 
 protected $data = array (
     'title' => '',
@@ -81,7 +81,7 @@ protected $data = array (
         0 => 
         array (
             'name' => 'nombre',
-            'label' => 'Nombre o Entidad',
+            'label' => 'Nombre o Sindicato',
             'presentation' => 'text',
         ),
         1 => 

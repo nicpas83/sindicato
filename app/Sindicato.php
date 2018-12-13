@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Entidad extends AppModel {
+class Sindicato extends AppModel {
     
-    protected $table = 'entidades';
+    protected $table = 'sindicatos';
 
     protected $fillable = [
         'nombre',
@@ -25,7 +25,7 @@ class Entidad extends AppModel {
         'legalizacion',
         'registro',
         'adhesiones',
-        'entidades_aderentes',
+        'sindicatos_aderentes',
         'cuota_sindical',
         'estatutos_aprobados',
         'delegado_normalizador',

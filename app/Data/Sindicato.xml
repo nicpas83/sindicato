@@ -1,6 +1,6 @@
-<Entidad>
+<Sindicato>
 
-    <search_list file="EntidadSL.php">
+    <search_list file="SindicatoSL.php">
         <!-- Filtros -->
         <searchfield name="firstname" label="Nombre" presentation="text" cols="6" />
         <searchfield name="lastname" label="Apellido" presentation="text" cols="6" />
@@ -8,7 +8,7 @@
         <searchfield name="active" label="Activo" presentation="active" cols="2" />
 
         <!-- Columnas -->
-        <listfield name="nombre" label="Nombre o Entidad" presentation="text" />
+        <listfield name="nombre" label="Nombre o Sindicato" presentation="text" />
         <listfield name="legajo" label="Apellido" presentation="text" />
         <listfield name="fecha_constitucion" label="Email" presentation="date" />
         <listfield name="localidad" label="Activo" presentation="active" />
@@ -22,7 +22,7 @@
     </search_list>
 
 
-    <tablemaint file="EntidadMaint.php">
+    <tablemaint file="SindicatoMaint.php">
         
         <tab label="Institucional" id="institucional">
             <fieldset label="Datos Principales" >
@@ -92,7 +92,7 @@
         </tab>
     </tablemaint>
 
-    <tablemaint file="EntidadPersonalMaint.php">
+    <tablemaint file="SindicatoPersonalMaint.php">
         <tab label="Usuario" id="user">
             <fieldset>
                 <field name="firstname" label="Nombre" presentation="text" cols="4" />
@@ -105,4 +105,4 @@
         </tab>
     </tablemaint>
 
-</Entidad>
+</Sindicato>

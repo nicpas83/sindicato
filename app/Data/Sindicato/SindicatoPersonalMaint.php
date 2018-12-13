@@ -6,7 +6,7 @@ namespace App\Data;
 
 use Eideos\Framework\Lib\AbstractData;
 
-class EntidadPersonalMaint extends AbstractData {
+class SindicatoPersonalMaint extends AbstractData {
 
 protected $data = array (
     'submit' => 'Guardar',

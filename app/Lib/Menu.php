@@ -12,10 +12,10 @@ class Menu extends AbstractMenu {
             "icon" => "home",
             "url" => "/home"
         ],
-        "entidades" => [
-            "label" => "Entidades",
+        "sindicatos" => [
+            "label" => "Sindicatos",
             "icon" => "users",
-            "controller" => "App\Http\Controllers\EntidadController",
+            "controller" => "App\Http\Controllers\SindicatoController",
             "action" => "index",
         ],
         "admin" => [
