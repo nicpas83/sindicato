@@ -62,15 +62,17 @@
             <fieldset label="Ubicación">
                 <field name="domicilio_real" label="Domicilio Real" presentation="text" actions="A|E" cols="6" />
                 <field name="domicilio_legal" label="Domicilio Legal" presentation="text" actions="A|E" cols="6" />        
+                <field name="provincia" label="Provincia" presentation="select" actions="A|E" cols="6" />
+                <field name="localidad" label="Localidad" presentation="select" actions="A|E" cols="6" />        
             </fieldset>     
         </tab>
         
         <tab label="Salud" id="salud">       
             <fieldset label="Obra Social">
-                <field name="obra_social" label="Obra Social" presentation="text" actions="A|E" cols="12" />
+                <field name="obra_social" label="Nombre" presentation="text" actions="A|E" cols="6" />
             </fieldset>
             <table label="Mutuales" paginate="true" model="Mutual" popup="true" assoc="true" orderby="Mutual.name ASC">
-                <field name="id" label="Nombre" presentation="select" model="App\Mutual" displayField="nombre" />
+                <field name="id" label="Mutual" presentation="select" model="App\Mutual" displayField="nombre" />
             </table>        
         </tab>
         

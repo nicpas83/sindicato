@@ -87,13 +87,13 @@ protected $data = array (
         1 => 
         array (
             'name' => 'legajo',
-            'label' => 'Apellido',
+            'label' => 'Legajo',
             'presentation' => 'text',
         ),
         2 => 
         array (
             'name' => 'fecha_constitucion',
-            'label' => 'Email',
+            'label' => 'Constituído',
             'presentation' => 'date',
         ),
         3 => 

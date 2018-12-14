@@ -255,6 +255,22 @@ protected $data = array (
                             'actions' => 'A|E',
                             'cols' => 6,
                         ),
+                        2 => 
+                        array (
+                            'name' => 'provincia',
+                            'label' => 'Provincia',
+                            'presentation' => 'select',
+                            'actions' => 'A|E',
+                            'cols' => 6,
+                        ),
+                        3 => 
+                        array (
+                            'name' => 'localidad',
+                            'label' => 'Localidad',
+                            'presentation' => 'select',
+                            'actions' => 'A|E',
+                            'cols' => 6,
+                        ),
                     ),
                     'label' => 'Ubicación',
                 ),
@@ -275,10 +291,10 @@ protected $data = array (
                         0 => 
                         array (
                             'name' => 'obra_social',
-                            'label' => 'Obra Social',
+                            'label' => 'Nombre',
                             'presentation' => 'text',
                             'actions' => 'A|E',
-                            'cols' => 12,
+                            'cols' => 6,
                         ),
                     ),
                     'label' => 'Obra Social',
@@ -290,7 +306,7 @@ protected $data = array (
                         0 => 
                         array (
                             'name' => 'id',
-                            'label' => 'Nombre',
+                            'label' => 'Mutual',
                             'presentation' => 'select',
                             'model' => 'App__Mutual',
                             'displayField' => 'nombre',

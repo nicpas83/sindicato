@@ -1,0 +1,25 @@
+<Mutual>
+
+    <search_list file="MutualSL.php">
+        <!-- Filtros -->
+        <searchfield name="nombre" label="Nombre" presentation="text" cols="6" />
+        
+        <!-- Columnas -->
+        <listfield name="nombre" label="Nombre" presentation="text" cols="6"/>
+                
+    </search_list>
+
+
+    <tablemaint file="MutualMaint.php">
+        <tab label="Nueva Mutual" id="mutual">   
+            <fieldset label="Datos Principales" >
+                <field name="nombre" label="Nombre" presentation="text" cols="8" />
+            
+            </fieldset>
+        </tab>    
+        
+    </tablemaint>
+
+    
+
+</Mutual>
