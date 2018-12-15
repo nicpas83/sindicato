@@ -299,27 +299,6 @@ protected $data = array (
                     ),
                     'label' => 'Obra Social',
                 ),
-                1 => 
-                array (
-                    'fields' => 
-                    array (
-                        0 => 
-                        array (
-                            'name' => 'id',
-                            'label' => 'Mutual',
-                            'presentation' => 'select',
-                            'model' => 'App__Mutual',
-                            'displayField' => 'nombre',
-                        ),
-                    ),
-                    'paginate' => true,
-                    'label' => 'Mutuales',
-                    'popup' => true,
-                    'model' => 'Mutual',
-                    'orderby' => 'Mutual.name ASC',
-                    'assoc' => true,
-                    'type' => 'tablepopup',
-                ),
             ),
             'id' => 'salud',
             'label' => 'Salud',
@@ -336,32 +315,37 @@ protected $data = array (
                         0 => 
                         array (
                             'name' => 'resolucion',
-                            'label' => 'Rol',
+                            'label' => 'Resolución',
                             'presentation' => 'text',
+                            'cols' => 6,
                         ),
                         1 => 
                         array (
                             'name' => 'fecha',
-                            'label' => 'Rol',
+                            'label' => 'Fecha',
                             'presentation' => 'date',
+                            'cols' => 6,
                         ),
                         2 => 
                         array (
                             'name' => 'tipo',
-                            'label' => 'Rol',
+                            'label' => 'Tipo',
                             'presentation' => 'select',
+                            'cols' => 6,
                         ),
                         3 => 
                         array (
                             'name' => 'publicacion',
                             'label' => 'Publicación B.O.',
                             'presentation' => 'date',
+                            'cols' => 6,
                         ),
                         4 => 
                         array (
                             'name' => 'actualizacion',
                             'label' => 'Actualizacion',
                             'presentation' => 'select',
+                            'cols' => 6,
                         ),
                     ),
                     'paginate' => true,

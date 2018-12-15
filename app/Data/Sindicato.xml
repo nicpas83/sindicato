@@ -71,19 +71,18 @@
             <fieldset label="Obra Social">
                 <field name="obra_social" label="Nombre" presentation="text" actions="A|E" cols="6" />
             </fieldset>
-            <table label="Mutuales" paginate="true" model="Mutual" popup="true" assoc="true" orderby="Mutual.name ASC">
+<!--            <table label="Mutuales" paginate="true" model="Mutual" popup="true" assoc="true" >
                 <field name="id" label="Mutual" presentation="select" model="App\Mutual" displayField="nombre" />
-            </table>        
+            </table>        -->
         </tab>
         
-        <tab label="Estatutos Aprobados" id="estatutos_aprobados">
-            
+        <tab label="Estatutos Aprobados" id="estatutos_aprobados">       
             <table label="Estatutos" paginate="true" model="Estatuto" popup="true" orderby="Estatuto.fecha DESC">
-                <field name="resolucion" label="Rol" presentation="text" />
-                <field name="fecha" label="Rol" presentation="date" />
-                <field name="tipo" label="Rol" presentation="select" />
-                <field name="publicacion" label="Publicación B.O." presentation="date" />
-                <field name="actualizacion" label="Actualizacion" presentation="select" />
+                <field name="resolucion" label="Resolución" presentation="text" cols="6" />
+                <field name="fecha" label="Fecha" presentation="date" cols="6"/>
+                <field name="tipo" label="Tipo" presentation="select" cols="6"/>
+                <field name="publicacion" label="Publicación B.O." presentation="date" cols="6"/>
+                <field name="actualizacion" label="Actualizacion" presentation="select" cols="6"/>
             </table>
         </tab>
         

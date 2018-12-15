@@ -16,7 +16,7 @@ class CreateMutualesTable extends Migration
         Schema::create('mutuales', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->string('nombre');
+            $table->string('nombre')->nullable();
         });
     }
 

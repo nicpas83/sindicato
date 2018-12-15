@@ -25,10 +25,10 @@ class SindicatoController extends AppController
 
     public function create()
     {
-        $this->bladeVars["title"] = "Nueva Sindicato";
+        $this->bladeVars["title"] = "Nuevo Sindicato";
         $this->bladeVars["breadcrumb"] = [
             ["label" => "Sindicatos", "url" => "/sindicatos"],
-            ["label" => "Nueva Sindicato", "active" => true],
+            ["label" => "Nuevo Sindicato", "active" => true],
         ];
         $this->maintfile = "Sindicato.SindicatoMaint";
         return parent::create();
