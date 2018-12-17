@@ -2,10 +2,14 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+class SindicatoMutual extends AppModel {
 
-class SindicatoMutual extends Model {
+    protected $table = "sindicatos_mutuales";
+    protected $fillable = ['sindicato_id', 'nombre'];
 
-    protected $table = "sindicato_mutuales";
+    public function sindicato() {
+        return $this->belongsTo('App\Sindicato');
+    }
 
+    
 }

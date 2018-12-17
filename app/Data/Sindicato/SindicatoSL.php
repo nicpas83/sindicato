@@ -81,61 +81,67 @@ protected $data = array (
         0 => 
         array (
             'name' => 'nombre',
-            'label' => 'Nombre o Sindicato',
+            'label' => 'Nombre',
             'presentation' => 'text',
         ),
         1 => 
+        array (
+            'name' => 'tipo_actividad',
+            'label' => 'Actividad',
+            'presentation' => 'text',
+        ),
+        2 => 
         array (
             'name' => 'legajo',
             'label' => 'Legajo',
             'presentation' => 'text',
         ),
-        2 => 
-        array (
-            'name' => 'fecha_constitucion',
-            'label' => 'Constituído',
-            'presentation' => 'date',
-        ),
         3 => 
         array (
-            'name' => 'localidad',
-            'label' => 'Activo',
-            'presentation' => 'active',
+            'name' => 'fecha_constitucion',
+            'label' => 'Fecha Constitución',
+            'presentation' => 'date',
         ),
         4 => 
         array (
-            'name' => 'provincia',
-            'label' => 'Activo',
+            'name' => 'cuit',
+            'label' => 'CUIT',
             'presentation' => 'active',
         ),
         5 => 
         array (
-            'name' => 'domicilio_real',
-            'label' => 'Activo',
+            'name' => 'telefono',
+            'label' => 'Teléfono',
             'presentation' => 'active',
         ),
         6 => 
         array (
-            'name' => 'telefono',
-            'label' => 'Activo',
+            'name' => 'domicilio_real',
+            'label' => 'Domicilio',
             'presentation' => 'active',
         ),
         7 => 
         array (
-            'name' => 'cuit',
-            'label' => 'Activo',
+            'name' => 'localidad',
+            'label' => 'Localidad',
             'presentation' => 'active',
         ),
         8 => 
         array (
-            'name' => 'grado',
-            'label' => 'Activo',
+            'name' => 'provincia',
+            'label' => 'Provincia',
             'presentation' => 'active',
         ),
         9 => 
         array (
+            'name' => 'grado',
+            'label' => 'Grado',
+            'presentation' => 'active',
+        ),
+        10 => 
+        array (
             'name' => 'estado',
-            'label' => 'Activo',
+            'label' => 'Estado',
             'presentation' => 'active',
         ),
     ),

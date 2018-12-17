@@ -16,9 +16,9 @@ class CreateSindicatosTable extends Migration
         Schema::create('sindicatos', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->string('nombre',255)->nullable();
-            $table->string('tipo_actividad',255)->nullable();
-            $table->string('cuit',255)->nullable();
+            $table->string('nombre');
+            $table->string('tipo_actividad',255);
+            $table->string('cuit',255);
             $table->string('legajo',255)->nullable();
             $table->date('fecha_constitucion')->nullable();
             $table->string('cuota_sindical',255)->nullable();

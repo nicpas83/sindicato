@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEstatutosTable extends Migration {
+class CreateSindicatosEstatutosTable extends Migration {
 
     /**
      * Run the migrations.
@@ -12,9 +12,11 @@ class CreateEstatutosTable extends Migration {
      * @return void
      */
     public function up() {
-        Schema::create('estatutos', function (Blueprint $table) {
+        Schema::create('sindicatos_estatutos', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+            $table->unsignedInteger('sindicato_id');
+            $table->foreign('sindicato_id')->references('id')->on('sindicatos');
             $table->string('resolucion', 255);
             $table->date('fecha');
             $table->string('tipo', 255)->nullable();
@@ -29,7 +31,7 @@ class CreateEstatutosTable extends Migration {
      * @return void
      */
     public function down() {
-        Schema::dropIfExists('estatutos');
+        Schema::dropIfExists('sindicatos_estatutos');
     }
 
 }

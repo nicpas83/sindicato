@@ -36,7 +36,7 @@ protected $data = array (
                         array (
                             'name' => 'tipo_actividad',
                             'label' => 'Tipo Actividad',
-                            'presentation' => 'select',
+                            'presentation' => 'tipo_actividad',
                             'actions' => 'A|E',
                             'cols' => 4,
                         ),
@@ -66,6 +66,14 @@ protected $data = array (
                         array (
                             'name' => 'cuota_sindical',
                             'label' => 'Cuota Sindical',
+                            'presentation' => 'text',
+                            'actions' => 'A|E',
+                            'cols' => 4,
+                        ),
+                        6 => 
+                        array (
+                            'name' => 'obra_social',
+                            'label' => 'Obra Social',
                             'presentation' => 'text',
                             'actions' => 'A|E',
                             'cols' => 4,
@@ -259,7 +267,7 @@ protected $data = array (
                         array (
                             'name' => 'provincia',
                             'label' => 'Provincia',
-                            'presentation' => 'select',
+                            'presentation' => 'provincias',
                             'actions' => 'A|E',
                             'cols' => 6,
                         ),
@@ -267,7 +275,7 @@ protected $data = array (
                         array (
                             'name' => 'localidad',
                             'label' => 'Localidad',
-                            'presentation' => 'select',
+                            'presentation' => 'text',
                             'actions' => 'A|E',
                             'cols' => 6,
                         ),
@@ -278,30 +286,31 @@ protected $data = array (
             'id' => 'general',
             'label' => 'Contacto',
         ),
-        'salud' => 
+        'mutuales' => 
         array (
             'type' => 'tab',
             'blocks' => 
             array (
                 0 => 
                 array (
-                    'type' => 'fieldset',
                     'fields' => 
                     array (
                         0 => 
                         array (
-                            'name' => 'obra_social',
+                            'name' => 'nombre',
                             'label' => 'Nombre',
                             'presentation' => 'text',
-                            'actions' => 'A|E',
-                            'cols' => 6,
                         ),
                     ),
-                    'label' => 'Obra Social',
+                    'paginate' => true,
+                    'label' => 'Mutuales',
+                    'popup' => true,
+                    'model' => 'SindicatoMutual',
+                    'type' => 'tablepopup',
                 ),
             ),
-            'id' => 'salud',
-            'label' => 'Salud',
+            'id' => 'mutuales',
+            'label' => 'Mutuales',
         ),
         'estatutos_aprobados' => 
         array (
@@ -351,7 +360,7 @@ protected $data = array (
                     'paginate' => true,
                     'label' => 'Estatutos',
                     'popup' => true,
-                    'model' => 'Estatuto',
+                    'model' => 'SindicatoEstatuto',
                     'orderby' => 'Estatuto.fecha DESC',
                     'type' => 'tablepopup',
                 ),
@@ -359,7 +368,7 @@ protected $data = array (
             'id' => 'estatutos_aprobados',
             'label' => 'Estatutos Aprobados',
         ),
-        'in' => 
+        'adhesiones' => 
         array (
             'type' => 'tab',
             'blocks' => 
@@ -370,24 +379,35 @@ protected $data = array (
                     array (
                         0 => 
                         array (
-                            'name' => 'id',
-                            'label' => 'Rol',
-                            'presentation' => 'select',
-                            'model' => 'Eideos__Framework__Role',
-                            'displayField' => 'name',
+                            'name' => 'nombre',
+                            'label' => 'Nombre',
+                            'presentation' => 'text',
+                            'cols' => 6,
+                        ),
+                        1 => 
+                        array (
+                            'name' => 'legajo',
+                            'label' => 'Legajo',
+                            'presentation' => 'text',
+                            'cols' => 6,
+                        ),
+                        2 => 
+                        array (
+                            'name' => 'grado',
+                            'label' => 'Grado',
+                            'presentation' => 'text',
+                            'cols' => 6,
                         ),
                     ),
                     'paginate' => true,
-                    'label' => 'Roles',
+                    'label' => 'Adhesiones',
                     'popup' => true,
-                    'model' => 'Role',
-                    'orderby' => 'Role.name ASC',
-                    'assoc' => true,
+                    'model' => 'SindicatoAdhesion',
                     'type' => 'tablepopup',
                 ),
             ),
-            'id' => 'in',
-            'label' => 'Más información',
+            'id' => 'adhesiones',
+            'label' => 'Adhesiones',
         ),
     ),
 );

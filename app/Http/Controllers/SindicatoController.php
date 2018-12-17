@@ -11,6 +11,8 @@ class SindicatoController extends AppController
     
     protected $rules = [
       'nombre' => 'required',
+      'tipo_actividad' => 'required',
+      'cuit' => 'required',
     ];
 
     public function index(Request $request)

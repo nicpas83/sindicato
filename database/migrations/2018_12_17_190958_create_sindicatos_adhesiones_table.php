@@ -4,20 +4,23 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSindicatoMutualesTable extends Migration {
-
+class CreateSindicatosAdhesionesTable extends Migration
+{
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up() {
-        Schema::create('sindicato_mutuales', function (Blueprint $table) {
+    public function up()
+    {
+        Schema::create('sindicatos_adhesiones', function (Blueprint $table) {
+            $table->increments('id');
+            $table->timestamps();
+            $table->string('legajo');
+            $table->string('nombre');
+            $table->string('grado');
             $table->unsignedInteger('sindicato_id');
-            $table->unsignedInteger('mutual_id');
             $table->foreign('sindicato_id')->references('id')->on('sindicatos');
-            $table->foreign('mutual_id')->references('id')->on('mutuales');
-            $table->primary(['sindicato_id', 'mutual_id']);
         });
     }
 
@@ -26,8 +29,8 @@ class CreateSindicatoMutualesTable extends Migration {
      *
      * @return void
      */
-    public function down() {
-        Schema::dropIfExists('sindicato_mutuals');
+    public function down()
+    {
+        Schema::dropIfExists('sindicatos_adhesiones');
     }
-
 }
