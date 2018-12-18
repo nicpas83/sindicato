@@ -34,15 +34,15 @@ class Sindicato extends AppModel {
         'obra_social',
     ];
 
-    public function sindicatos_mutuales() {
-        return $this->hasMany('App\SindicatoMutual');
-    }
-
-    public function sindicatos_estatutos() {
+    public function sindicatosestatutos() {
         return $this->hasMany('App\SindicatoEstatuto');
     }
     
-    public function sindicatos_adhesiones() {
+    public function sindicatosmutuales() {
+        return $this->hasMany('App\SindicatoMutual');
+    }
+    
+    public function sindicatosadhesiones() {
         return $this->hasMany('App\SindicatoAdhesion');
     }
 

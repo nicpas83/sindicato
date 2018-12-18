@@ -16,8 +16,8 @@ class CreateSindicatosAdhesionesTable extends Migration
         Schema::create('sindicatos_adhesiones', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->string('legajo');
             $table->string('nombre');
+            $table->string('legajo');
             $table->string('grado');
             $table->unsignedInteger('sindicato_id');
             $table->foreign('sindicato_id')->references('id')->on('sindicatos');

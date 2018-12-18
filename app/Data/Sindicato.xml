@@ -33,6 +33,7 @@
                 <field name="legajo" label="Legajo" presentation="text" cols="4" />
                 <field name="fecha_constitucion" label="Fecha Constitución" presentation="date" cols="4" />
                 <field name="cuota_sindical" label="Cuota Sindical" presentation="text" actions="A|E" cols="4" />
+                <field name="empleador_tipo" label="Tipo de Empleador" presentation="text" actions="A|E" cols="4" />
                 <field name="obra_social" label="Obra Social" presentation="text" actions="A|E" cols="4" />
             </fieldset>
             <fieldset label="Registo" >
@@ -44,10 +45,19 @@
                 <field name="boletin_oficial" label="Boletín Oficial" presentation="text" actions="A|E" cols="4"/>
             </fieldset>         
             <fieldset label="Estado">
-                <field name="grado" label="Grado" presentation="text" actions="A|E" cols="6" />
-                <field name="estado" label="Estado" presentation="text" actions="A|E" cols="6"/>
+                <field name="grado" label="Grado" presentation="grado_sindicato" actions="A|E" cols="6" />
+                <field name="estado" label="Estado" presentation="estado_sindicato" actions="A|E" cols="6"/>
                 <field name="conciliaciones" label="Conciliaciones" presentation="text" actions="A|E" cols="6" />
                 <field name="legalizacion" label="Legalizacion" presentation="text" actions="A|E" cols="6" />
+            </fieldset>      
+            <fieldset label="Delegado Normalizador">
+                <field name="dn_designante" label="Designante" presentation="estado_sindicato" actions="A|E" cols="6"/>
+                <field name="dn_nombre" label="Nombre" presentation="text" actions="A|E" cols="6" />
+                <field name="dn_cuit" label="CUIT" presentation="text" actions="A|E" cols="6" />
+                <field name="dn_nro_doc" label="Nro Doc" presentation="int" actions="A|E" cols="6" />
+                <field name="dn_sexo" label="Sexo" presentation="sexo" actions="A|E" cols="6" />
+                <field name="dn_fecha_nac" label="Fecha Nac." presentation="date" actions="A|E" cols="6" />
+                <field name="dn_fecha_venc" label="Fecha Venc." presentation="date" actions="A|E" cols="6" />
             </fieldset>      
             
         </tab>
@@ -80,9 +90,9 @@
             <table label="Estatutos" paginate="true" model="SindicatoEstatuto" popup="true" orderby="Estatuto.fecha DESC">
                 <field name="resolucion" label="Resolución" presentation="text" cols="6" />
                 <field name="fecha" label="Fecha" presentation="date" cols="6"/>
-                <field name="tipo" label="Tipo" presentation="select" cols="6"/>
+                <field name="tipo" label="Tipo" presentation="text" cols="6"/>
                 <field name="publicacion" label="Publicación B.O." presentation="date" cols="6"/>
-                <field name="actualizacion" label="Actualizacion" presentation="select" cols="6"/>
+                <field name="actualizacion" label="Actualizacion" presentation="text" cols="6"/>
             </table>
         </tab>
         

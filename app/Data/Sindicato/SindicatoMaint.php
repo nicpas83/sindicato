@@ -72,6 +72,14 @@ protected $data = array (
                         ),
                         6 => 
                         array (
+                            'name' => 'empleador_tipo',
+                            'label' => 'Tipo de Empleador',
+                            'presentation' => 'text',
+                            'actions' => 'A|E',
+                            'cols' => 4,
+                        ),
+                        7 => 
+                        array (
                             'name' => 'obra_social',
                             'label' => 'Obra Social',
                             'presentation' => 'text',
@@ -146,7 +154,7 @@ protected $data = array (
                         array (
                             'name' => 'grado',
                             'label' => 'Grado',
-                            'presentation' => 'text',
+                            'presentation' => 'grado_sindicato',
                             'actions' => 'A|E',
                             'cols' => 6,
                         ),
@@ -154,7 +162,7 @@ protected $data = array (
                         array (
                             'name' => 'estado',
                             'label' => 'Estado',
-                            'presentation' => 'text',
+                            'presentation' => 'estado_sindicato',
                             'actions' => 'A|E',
                             'cols' => 6,
                         ),
@@ -339,7 +347,7 @@ protected $data = array (
                         array (
                             'name' => 'tipo',
                             'label' => 'Tipo',
-                            'presentation' => 'select',
+                            'presentation' => 'text',
                             'cols' => 6,
                         ),
                         3 => 
@@ -353,7 +361,7 @@ protected $data = array (
                         array (
                             'name' => 'actualizacion',
                             'label' => 'Actualizacion',
-                            'presentation' => 'select',
+                            'presentation' => 'text',
                             'cols' => 6,
                         ),
                     ),
