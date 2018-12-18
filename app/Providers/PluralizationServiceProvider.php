@@ -14,6 +14,7 @@ class PluralizationServiceProvider extends ServiceProvider {
                 'sindicatoestatuto' => 'sindicatosestatutos',
                 'sindicatomutual' => 'sindicatosmutuales',
                 'sindicatoadhesion' => 'sindicatosadhesiones',
+                'sindicatoautoridad' => 'sindicatosautoridades',
             ],
         ]);
         Inflector::rules('singular', [
@@ -22,6 +23,7 @@ class PluralizationServiceProvider extends ServiceProvider {
                 'sindicatosestatutos' => 'sindicatoestatuto',
                 'sindicatosmutuales' => 'sindicatomutual',
                 'sindicatosadhesiones' => 'sindicatoadhesion',
+                'sindicatosautoridades' => 'sindicatoautoridad',
             ],
         ]);
     }

@@ -51,7 +51,7 @@
                 <field name="legalizacion" label="Legalizacion" presentation="text" actions="A|E" cols="6" />
             </fieldset>      
             <fieldset label="Delegado Normalizador">
-                <field name="dn_designante" label="Designante" presentation="estado_sindicato" actions="A|E" cols="6"/>
+                <field name="dn_designante" label="Designante" presentation="text" actions="A|E" cols="6"/>
                 <field name="dn_nombre" label="Nombre" presentation="text" actions="A|E" cols="6" />
                 <field name="dn_cuit" label="CUIT" presentation="text" actions="A|E" cols="6" />
                 <field name="dn_nro_doc" label="Nro Doc" presentation="int" actions="A|E" cols="6" />
@@ -101,6 +101,14 @@
                 <field name="nombre" label="Nombre" presentation="text" cols="6"/>
                 <field name="legajo" label="Legajo" presentation="text" cols="6" />
                 <field name="grado" label="Grado" presentation="text" cols="6"/>
+            </table>
+        </tab>
+        
+        <tab label="Comisión Directiva" id="comision">       
+            <table label="Autoridades" paginate="true" model="SindicatoAutoridad" popup="true" >
+                <field name="nombre" label="Nombre" presentation="text" cols="6"/>
+                <field name="apellido" label="Apellido" presentation="text" cols="6"/>
+                <field name="cargo" label="Cargo" presentation="cargos_sindicato" cols="6" />
             </table>
         </tab>
        

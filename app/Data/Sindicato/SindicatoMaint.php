@@ -185,6 +185,70 @@ protected $data = array (
                     ),
                     'label' => 'Estado',
                 ),
+                3 => 
+                array (
+                    'type' => 'fieldset',
+                    'fields' => 
+                    array (
+                        0 => 
+                        array (
+                            'name' => 'dn_designante',
+                            'label' => 'Designante',
+                            'presentation' => 'text',
+                            'actions' => 'A|E',
+                            'cols' => 6,
+                        ),
+                        1 => 
+                        array (
+                            'name' => 'dn_nombre',
+                            'label' => 'Nombre',
+                            'presentation' => 'text',
+                            'actions' => 'A|E',
+                            'cols' => 6,
+                        ),
+                        2 => 
+                        array (
+                            'name' => 'dn_cuit',
+                            'label' => 'CUIT',
+                            'presentation' => 'text',
+                            'actions' => 'A|E',
+                            'cols' => 6,
+                        ),
+                        3 => 
+                        array (
+                            'name' => 'dn_nro_doc',
+                            'label' => 'Nro Doc',
+                            'presentation' => 'int',
+                            'actions' => 'A|E',
+                            'cols' => 6,
+                        ),
+                        4 => 
+                        array (
+                            'name' => 'dn_sexo',
+                            'label' => 'Sexo',
+                            'presentation' => 'sexo',
+                            'actions' => 'A|E',
+                            'cols' => 6,
+                        ),
+                        5 => 
+                        array (
+                            'name' => 'dn_fecha_nac',
+                            'label' => 'Fecha Nac.',
+                            'presentation' => 'date',
+                            'actions' => 'A|E',
+                            'cols' => 6,
+                        ),
+                        6 => 
+                        array (
+                            'name' => 'dn_fecha_venc',
+                            'label' => 'Fecha Venc.',
+                            'presentation' => 'date',
+                            'actions' => 'A|E',
+                            'cols' => 6,
+                        ),
+                    ),
+                    'label' => 'Delegado Normalizador',
+                ),
             ),
             'id' => 'institucional',
             'label' => 'Institucional',
@@ -416,6 +480,47 @@ protected $data = array (
             ),
             'id' => 'adhesiones',
             'label' => 'Adhesiones',
+        ),
+        'comision' => 
+        array (
+            'type' => 'tab',
+            'blocks' => 
+            array (
+                0 => 
+                array (
+                    'fields' => 
+                    array (
+                        0 => 
+                        array (
+                            'name' => 'nombre',
+                            'label' => 'Nombre',
+                            'presentation' => 'text',
+                            'cols' => 6,
+                        ),
+                        1 => 
+                        array (
+                            'name' => 'apellido',
+                            'label' => 'Apellido',
+                            'presentation' => 'text',
+                            'cols' => 6,
+                        ),
+                        2 => 
+                        array (
+                            'name' => 'cargo',
+                            'label' => 'Cargo',
+                            'presentation' => 'cargos_sindicato',
+                            'cols' => 6,
+                        ),
+                    ),
+                    'paginate' => true,
+                    'label' => 'Autoridades',
+                    'popup' => true,
+                    'model' => 'SindicatoAutoridad',
+                    'type' => 'tablepopup',
+                ),
+            ),
+            'id' => 'comision',
+            'label' => 'Comisión Directiva',
         ),
     ),
 );

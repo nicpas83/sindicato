@@ -11,6 +11,7 @@ class Sindicato extends AppModel {
         'legajo',
         'fecha_constitucion',
         'cuota_sindical',
+        'empleador_tipo',
         'registro',
         'registro_nro',
         'resolucion',
@@ -32,18 +33,29 @@ class Sindicato extends AppModel {
         'provincia',
         'localidad',
         'obra_social',
+        'dn_designante',
+        'dn_nombre',
+        'dn_cuit',
+        'dn_nro_doc',
+        'dn_sexo',
+        'dn_fecha_nac',
+        'dn_fecha_venc',
     ];
 
     public function sindicatosestatutos() {
         return $this->hasMany('App\SindicatoEstatuto');
     }
-    
+
     public function sindicatosmutuales() {
         return $this->hasMany('App\SindicatoMutual');
     }
-    
+
     public function sindicatosadhesiones() {
         return $this->hasMany('App\SindicatoAdhesion');
+    }
+
+    public function sindicatosautoridades() {
+        return $this->hasMany('App\SindicatoAutoridad');
     }
 
 }
