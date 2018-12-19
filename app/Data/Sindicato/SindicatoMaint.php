@@ -196,7 +196,7 @@ protected $data = array (
                             'label' => 'Designante',
                             'presentation' => 'text',
                             'actions' => 'A|E',
-                            'cols' => 6,
+                            'cols' => 4,
                         ),
                         1 => 
                         array (
@@ -204,7 +204,7 @@ protected $data = array (
                             'label' => 'Nombre',
                             'presentation' => 'text',
                             'actions' => 'A|E',
-                            'cols' => 6,
+                            'cols' => 4,
                         ),
                         2 => 
                         array (
@@ -212,7 +212,7 @@ protected $data = array (
                             'label' => 'CUIT',
                             'presentation' => 'text',
                             'actions' => 'A|E',
-                            'cols' => 6,
+                            'cols' => 4,
                         ),
                         3 => 
                         array (
@@ -220,7 +220,7 @@ protected $data = array (
                             'label' => 'Nro Doc',
                             'presentation' => 'int',
                             'actions' => 'A|E',
-                            'cols' => 6,
+                            'cols' => 3,
                         ),
                         4 => 
                         array (
@@ -228,7 +228,7 @@ protected $data = array (
                             'label' => 'Sexo',
                             'presentation' => 'sexo',
                             'actions' => 'A|E',
-                            'cols' => 6,
+                            'cols' => 3,
                         ),
                         5 => 
                         array (
@@ -236,7 +236,7 @@ protected $data = array (
                             'label' => 'Fecha Nac.',
                             'presentation' => 'date',
                             'actions' => 'A|E',
-                            'cols' => 6,
+                            'cols' => 3,
                         ),
                         6 => 
                         array (
@@ -244,10 +244,34 @@ protected $data = array (
                             'label' => 'Fecha Venc.',
                             'presentation' => 'date',
                             'actions' => 'A|E',
-                            'cols' => 6,
+                            'cols' => 3,
                         ),
                     ),
                     'label' => 'Delegado Normalizador',
+                ),
+                4 => 
+                array (
+                    'type' => 'fieldset',
+                    'fields' => 
+                    array (
+                        0 => 
+                        array (
+                            'name' => 'posicion_politica',
+                            'label' => 'Posición Política',
+                            'presentation' => 'text',
+                            'actions' => 'A|E',
+                            'cols' => 6,
+                        ),
+                        1 => 
+                        array (
+                            'name' => 'oposicion_politica',
+                            'label' => 'Oposición Política',
+                            'presentation' => 'text',
+                            'actions' => 'A|E',
+                            'cols' => 6,
+                        ),
+                    ),
+                    'label' => 'Lineas Políticas',
                 ),
             ),
             'id' => 'institucional',
@@ -357,6 +381,96 @@ protected $data = array (
             ),
             'id' => 'general',
             'label' => 'Contacto',
+        ),
+        'otros_datos' => 
+        array (
+            'type' => 'tab',
+            'blocks' => 
+            array (
+                0 => 
+                array (
+                    'type' => 'fieldset',
+                    'fields' => 
+                    array (
+                        0 => 
+                        array (
+                            'name' => 'fortalezas',
+                            'label' => 'Fortalezas',
+                            'presentation' => 'textarea',
+                            'actions' => 'A|E',
+                            'cols' => 12,
+                        ),
+                        1 => 
+                        array (
+                            'name' => 'debilidades',
+                            'label' => 'Debilidades',
+                            'presentation' => 'textarea',
+                            'actions' => 'A|E',
+                            'cols' => 12,
+                        ),
+                    ),
+                    'label' => 'Fortalezas y Debilidades',
+                ),
+                1 => 
+                array (
+                    'type' => 'fieldset',
+                    'fields' => 
+                    array (
+                        0 => 
+                        array (
+                            'name' => 'indicador_gremial',
+                            'label' => 'Indicadores',
+                            'presentation' => 'textarea',
+                            'actions' => 'A|E',
+                            'rows' => 3,
+                            'cols' => 12,
+                        ),
+                    ),
+                    'label' => 'Indicador de Representación Gremial',
+                ),
+                2 => 
+                array (
+                    'type' => 'fieldset',
+                    'fields' => 
+                    array (
+                        0 => 
+                        array (
+                            'name' => 'dia_gremio',
+                            'label' => 'Día del Gremio',
+                            'presentation' => 'date',
+                            'actions' => 'A|E',
+                            'cols' => 4,
+                        ),
+                        1 => 
+                        array (
+                            'name' => 'elecciones',
+                            'label' => 'Elecciones',
+                            'presentation' => 'date',
+                            'actions' => 'A|E',
+                            'cols' => 4,
+                        ),
+                        2 => 
+                        array (
+                            'name' => 'mandato_actual',
+                            'label' => 'Mandato',
+                            'presentation' => 'text',
+                            'actions' => 'A|E',
+                            'cols' => 4,
+                        ),
+                        3 => 
+                        array (
+                            'name' => 'cupo_femenino',
+                            'label' => 'Cupo Femenino',
+                            'presentation' => 'int',
+                            'actions' => 'A|E',
+                            'cols' => 4,
+                        ),
+                    ),
+                    'label' => 'General',
+                ),
+            ),
+            'id' => 'otros_datos',
+            'label' => 'Otros datos',
         ),
         'mutuales' => 
         array (
@@ -521,6 +635,215 @@ protected $data = array (
             ),
             'id' => 'comision',
             'label' => 'Comisión Directiva',
+        ),
+        'filiales' => 
+        array (
+            'type' => 'tab',
+            'blocks' => 
+            array (
+                0 => 
+                array (
+                    'fields' => 
+                    array (
+                        0 => 
+                        array (
+                            'name' => 'provincia',
+                            'label' => 'Provincia',
+                            'presentation' => 'provincias',
+                            'cols' => 6,
+                        ),
+                        1 => 
+                        array (
+                            'name' => 'localidad',
+                            'label' => 'Localidad',
+                            'presentation' => 'text',
+                            'cols' => 6,
+                        ),
+                        2 => 
+                        array (
+                            'name' => 'referente',
+                            'label' => 'Referente',
+                            'presentation' => 'text',
+                            'cols' => 6,
+                        ),
+                        3 => 
+                        array (
+                            'name' => 'telefono',
+                            'label' => 'Telefono',
+                            'presentation' => 'text',
+                            'cols' => 6,
+                        ),
+                        4 => 
+                        array (
+                            'name' => 'direccion',
+                            'label' => 'Direccion',
+                            'presentation' => 'text',
+                            'cols' => 6,
+                        ),
+                        5 => 
+                        array (
+                            'name' => 'email',
+                            'label' => 'Email',
+                            'presentation' => 'text',
+                            'cols' => 6,
+                        ),
+                        6 => 
+                        array (
+                            'name' => 'web',
+                            'label' => 'Web',
+                            'presentation' => 'text',
+                            'cols' => 6,
+                        ),
+                    ),
+                    'paginate' => true,
+                    'label' => 'Filiales',
+                    'popup' => true,
+                    'model' => 'SindicatoFilial',
+                    'type' => 'tablepopup',
+                ),
+            ),
+            'id' => 'filiales',
+            'label' => 'Filiales',
+        ),
+        'empleados' => 
+        array (
+            'type' => 'tab',
+            'blocks' => 
+            array (
+                0 => 
+                array (
+                    'type' => 'fieldset',
+                    'fields' => 
+                    array (
+                        0 => 
+                        array (
+                            'name' => 'q_afiliados',
+                            'label' => 'Cantidad Afiliados',
+                            'presentation' => 'int',
+                            'actions' => 'A|E',
+                            'cols' => 4,
+                        ),
+                        1 => 
+                        array (
+                            'name' => 'salario_minimo',
+                            'label' => 'Salario Mínimo',
+                            'presentation' => 'money',
+                            'actions' => 'A|E',
+                            'cols' => 4,
+                        ),
+                        2 => 
+                        array (
+                            'name' => 'salario_maximo',
+                            'label' => 'Salario Máximo',
+                            'presentation' => 'money',
+                            'actions' => 'A|E',
+                            'cols' => 4,
+                        ),
+                    ),
+                    'label' => 'General',
+                ),
+                1 => 
+                array (
+                    'fields' => 
+                    array (
+                        0 => 
+                        array (
+                            'name' => 'categoria',
+                            'label' => 'Categoria',
+                            'presentation' => 'provincias',
+                            'cols' => 6,
+                        ),
+                        1 => 
+                        array (
+                            'name' => 'descripcion',
+                            'label' => 'Descripción',
+                            'presentation' => 'textarea',
+                            'cols' => 6,
+                        ),
+                    ),
+                    'paginate' => true,
+                    'label' => 'Servicios o Prestaciones',
+                    'popup' => true,
+                    'model' => 'SindicatoPrestacion',
+                    'type' => 'tablepopup',
+                ),
+                2 => 
+                array (
+                    'fields' => 
+                    array (
+                        0 => 
+                        array (
+                            'name' => 'beneficio',
+                            'label' => 'Beneficio',
+                            'presentation' => 'text',
+                            'cols' => 12,
+                        ),
+                    ),
+                    'paginate' => true,
+                    'label' => 'Beneficios',
+                    'popup' => true,
+                    'model' => 'SindicatoBeneficio',
+                    'type' => 'tablepopup',
+                ),
+            ),
+            'id' => 'empleados',
+            'label' => 'Afiliados/Empleados',
+        ),
+        'paritarias' => 
+        array (
+            'type' => 'tab',
+            'blocks' => 
+            array (
+                0 => 
+                array (
+                    'type' => 'fieldset',
+                    'fields' => 
+                    array (
+                        0 => 
+                        array (
+                            'name' => 'acuerdo_salarial',
+                            'label' => 'Acuerdos Salariales',
+                            'presentation' => 'textarea',
+                            'actions' => 'A|E',
+                            'cols' => 12,
+                        ),
+                    ),
+                ),
+                1 => 
+                array (
+                    'fields' => 
+                    array (
+                        0 => 
+                        array (
+                            'name' => 'rubro',
+                            'label' => 'Rubro',
+                            'presentation' => 'rubros_actividad',
+                            'cols' => 6,
+                        ),
+                        1 => 
+                        array (
+                            'name' => 'fecha',
+                            'label' => 'Fecha',
+                            'presentation' => 'date',
+                            'cols' => 6,
+                        ),
+                        2 => 
+                        array (
+                            'name' => 'detalle',
+                            'label' => 'Detalle',
+                            'presentation' => 'text',
+                            'cols' => 12,
+                        ),
+                    ),
+                    'paginate' => true,
+                    'label' => 'Trayectoria de Paritarias',
+                    'popup' => true,
+                    'model' => 'SindicatoParitaria',
+                    'type' => 'tablepopup',
+                ),
+            ),
+            'id' => 'paritarias',
+            'label' => 'Paritarias',
         ),
     ),
 );

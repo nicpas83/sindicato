@@ -19,6 +19,7 @@
         <listfield name="provincia" label="Provincia" presentation="active" />
         <listfield name="grado" label="Grado" presentation="active" />
         <listfield name="estado" label="Estado" presentation="active" />
+        <listfield name="q_afiliados" label="Afiliados" presentation="active" />
         
     </search_list>
 
@@ -51,14 +52,19 @@
                 <field name="legalizacion" label="Legalizacion" presentation="text" actions="A|E" cols="6" />
             </fieldset>      
             <fieldset label="Delegado Normalizador">
-                <field name="dn_designante" label="Designante" presentation="text" actions="A|E" cols="6"/>
-                <field name="dn_nombre" label="Nombre" presentation="text" actions="A|E" cols="6" />
-                <field name="dn_cuit" label="CUIT" presentation="text" actions="A|E" cols="6" />
-                <field name="dn_nro_doc" label="Nro Doc" presentation="int" actions="A|E" cols="6" />
-                <field name="dn_sexo" label="Sexo" presentation="sexo" actions="A|E" cols="6" />
-                <field name="dn_fecha_nac" label="Fecha Nac." presentation="date" actions="A|E" cols="6" />
-                <field name="dn_fecha_venc" label="Fecha Venc." presentation="date" actions="A|E" cols="6" />
-            </fieldset>      
+                <field name="dn_designante" label="Designante" presentation="text" actions="A|E" cols="4"/>
+                <field name="dn_nombre" label="Nombre" presentation="text" actions="A|E" cols="4" />
+                <field name="dn_cuit" label="CUIT" presentation="text" actions="A|E" cols="4" />
+                <field name="dn_nro_doc" label="Nro Doc" presentation="int" actions="A|E" cols="3" />
+                <field name="dn_sexo" label="Sexo" presentation="sexo" actions="A|E" cols="3" />
+                <field name="dn_fecha_nac" label="Fecha Nac." presentation="date" actions="A|E" cols="3" />
+                <field name="dn_fecha_venc" label="Fecha Venc." presentation="date" actions="A|E" cols="3" />
+            </fieldset>    
+            
+            <fieldset label="Lineas Políticas">
+                <field name="posicion_politica" label="Posición Política" presentation="text" actions="A|E" cols="6"/>
+                <field name="oposicion_politica" label="Oposición Política" presentation="text" actions="A|E" cols="6"/>
+            </fieldset>  
             
         </tab>
         
@@ -79,6 +85,26 @@
                 <field name="localidad" label="Localidad" presentation="text" actions="A|E" cols="6" />        
             </fieldset>     
         </tab>
+        
+        <tab label="Otros datos" id="otros_datos">
+            
+            <fieldset label="Fortalezas y Debilidades">
+                <field name="fortalezas" label="Fortalezas" presentation="textarea" actions="A|E" cols="12" />
+                <field name="debilidades" label="Debilidades" presentation="textarea" actions="A|E" cols="12" />
+            </fieldset>
+            <fieldset label="Indicador de Representación Gremial">
+                <field name="indicador_gremial" label="Indicadores" presentation="textarea" actions="A|E" cols="12" rows="3"/>
+            </fieldset>
+            
+            <fieldset label="General">
+                <field name="dia_gremio" label="Día del Gremio" presentation="date" actions="A|E" cols="4" />
+                <field name="elecciones" label="Elecciones" presentation="date" actions="A|E" cols="4" />
+                <field name="mandato_actual" label="Mandato" presentation="text" actions="A|E" cols="4" />
+                <field name="cupo_femenino" label="Cupo Femenino" presentation="int" actions="A|E" cols="4" />
+            </fieldset>
+            
+        </tab>
+
         
         <tab label="Mutuales" id="mutuales">                
             <table label="Mutuales" paginate="true" model="SindicatoMutual" popup="true" >
@@ -110,6 +136,46 @@
                 <field name="apellido" label="Apellido" presentation="text" cols="6"/>
                 <field name="cargo" label="Cargo" presentation="cargos_sindicato" cols="6" />
             </table>
+        </tab>
+        
+        <tab label="Filiales" id="filiales">       
+            <table label="Filiales" paginate="true" model="SindicatoFilial" popup="true" >
+                <field name="provincia" label="Provincia" presentation="provincias" cols="6"/>
+                <field name="localidad" label="Localidad" presentation="text" cols="6"/>
+                <field name="referente" label="Referente" presentation="text" cols="6" />
+                <field name="telefono" label="Telefono" presentation="text" cols="6" />
+                <field name="direccion" label="Direccion" presentation="text" cols="6" />
+                <field name="email" label="Email" presentation="text" cols="6" />
+                <field name="web" label="Web" presentation="text" cols="6" />
+            </table>
+        </tab>
+       
+        <tab label="Afiliados/Empleados" id="empleados">      
+            <fieldset label="General">
+                <field name="q_afiliados" label="Cantidad Afiliados" presentation="int" actions="A|E" cols="4" />
+                <field name="salario_minimo" label="Salario Mínimo" presentation="money" actions="A|E" cols="4" />
+                <field name="salario_maximo" label="Salario Máximo" presentation="money" actions="A|E" cols="4" />
+            </fieldset>
+            
+            <table label="Servicios o Prestaciones" paginate="true" model="SindicatoPrestacion" popup="true" >
+                <field name="categoria" label="Categoria" presentation="provincias" cols="6"/>
+                <field name="descripcion" label="Descripción" presentation="textarea" cols="6"/>
+            </table>
+            <table label="Beneficios" paginate="true" model="SindicatoBeneficio" popup="true" >
+                <field name="beneficio" label="Beneficio" presentation="text" cols="12"/>
+            </table>
+        </tab>
+        
+        <tab label="Paritarias" id="paritarias">      
+            <fieldset>
+                <field name="acuerdo_salarial" label="Acuerdos Salariales" presentation="textarea" actions="A|E" cols="12" />
+            </fieldset>
+            <table label="Trayectoria de Paritarias" paginate="true" model="SindicatoParitaria" popup="true" >
+                <field name="rubro" label="Rubro" presentation="rubros_actividad" cols="6"/>
+                <field name="fecha" label="Fecha" presentation="date" cols="6"/>
+                <field name="detalle" label="Detalle" presentation="text" cols="12"/>
+            </table>
+           
         </tab>
        
     </tablemaint>

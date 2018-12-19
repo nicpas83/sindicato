@@ -58,4 +58,20 @@ class Sindicato extends AppModel {
         return $this->hasMany('App\SindicatoAutoridad');
     }
 
+    public function sindicatosfiliales() {
+        return $this->hasMany('App\SindicatoFilial');
+    }
+
+    public function sindicatosprestaciones() {
+        return $this->hasMany('App\SindicatoPrestacion');
+    }
+
+    public function sindicatosbeneficios() {
+        return $this->hasMany('App\SindicatoBeneficio');
+    }
+    
+    public function sindicatosparitarias() {
+        return $this->hasMany('App\SindicatoParitaria');
+    }
+
 }

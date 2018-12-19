@@ -144,6 +144,12 @@ protected $data = array (
             'label' => 'Estado',
             'presentation' => 'active',
         ),
+        11 => 
+        array (
+            'name' => 'q_afiliados',
+            'label' => 'Afiliados',
+            'presentation' => 'active',
+        ),
     ),
 );
 

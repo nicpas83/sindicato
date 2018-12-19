@@ -51,6 +51,7 @@ class CreateSindicatosTable extends Migration
             $table->string('dn_sexo')->nullable();
             $table->string('dn_fecha_nac')->nullable();
             $table->string('dn_fecha_venc')->nullable();
+            $table->string('q_afiliados')->nullable();
         });
     }
 
