@@ -4,15 +4,14 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSindicatosTable extends Migration
-{
+class CreateSindicatosTable extends Migration {
+
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()
-    {
+    public function up() {
         Schema::create('sindicatos', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
@@ -51,7 +50,19 @@ class CreateSindicatosTable extends Migration
             $table->string('dn_sexo')->nullable();
             $table->string('dn_fecha_nac')->nullable();
             $table->string('dn_fecha_venc')->nullable();
-            $table->string('q_afiliados')->nullable();
+            $table->string('posicion_politica')->nullable();
+            $table->string('oposicion_politica')->nullable();
+            $table->text('fortalezas')->nullable();
+            $table->text('debilidades')->nullable();
+            $table->text('indicador_gremial')->nullable();
+            $table->date('dia_gremio')->nullable();
+            $table->date('elecciones')->nullable();
+            $table->string('mandato_actual')->nullable();
+            $table->integer('cupo_femenino')->nullable();
+            $table->integer('q_afiliados')->nullable();
+            $table->string('salario_minimo')->nullable();
+            $table->string('salario_maximo')->nullable();
+            $table->string('acuerdo_salarial')->nullable();
         });
     }
 
@@ -60,8 +71,8 @@ class CreateSindicatosTable extends Migration
      *
      * @return void
      */
-    public function down()
-    {
+    public function down() {
         Schema::dropIfExists('sindicatos');
     }
+
 }

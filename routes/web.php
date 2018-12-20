@@ -18,6 +18,6 @@ Route::group(['middleware' => ['auth', 'acl']], function () {
   Route::view('/home', 'framework::home');
 
   Route::resource('sindicatos', 'SindicatoController');
-  Route::resource('mutuales', 'MutualController');
+  Route::resource('camaras', 'CamaraController');
 });
 

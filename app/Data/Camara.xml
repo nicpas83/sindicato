@@ -1,0 +1,109 @@
+<Camara>
+
+    <search_list file="CamaraSL.php">
+        <!-- Filtros -->
+        <searchfield name="firstname" label="Nombre" presentation="text" cols="6" />
+        <searchfield name="lastname" label="Apellido" presentation="text" cols="6" />
+        <searchfield name="email" label="Email" presentation="text" cols="10" />
+        <searchfield name="active" label="Activo" presentation="active" cols="2" />
+
+        <!-- Columnas -->
+        <listfield name="nombre" label="Nombre" presentation="text" />
+        <listfield name="tipo_actividad" label="Actividad" presentation="text" />
+        <listfield name="fecha_constitucion" label="Fecha Constitución" presentation="date" />
+        <listfield name="cuit" label="CUIT" presentation="active" />
+        <listfield name="telefono" label="Teléfono" presentation="active" />
+        <listfield name="domicilio_real" label="Domicilio" presentation="active" />
+        <listfield name="localidad" label="Localidad" presentation="active" />
+        <listfield name="provincia" label="Provincia" presentation="active" />
+        <listfield name="grado" label="Grado" presentation="active" />
+        <listfield name="estado" label="Estado" presentation="active" />
+        <listfield name="q_afiliados" label="Afiliados" presentation="active" />
+        <listfield name="legajo" label="Legajo" presentation="text" />
+        
+    </search_list>
+
+
+    <tablemaint file="CamaraMaint.php">
+        
+        <tab label="Institucional" id="institucional">
+            <fieldset label="Datos Principales" >
+                <field name="nombre" label="Nombre o Camara" presentation="text" cols="4" />
+                <field name="tipo_actividad" label="Tipo Actividad" presentation="tipo_actividad" actions="A|E" cols="4" />
+                <field name="cuit" label="CUIT" presentation="text" actions="A|E" cols="4" />
+                <field name="fecha_constitucion" label="Fecha Constitución" presentation="date" cols="4" />
+            </fieldset>
+               
+            <fieldset label="Contacto">
+                <field name="telefono" label="Teléfono" presentation="text" actions="A|E" cols="4" />
+                <field name="email_principal" label="Email Principal" presentation="text" actions="A|E" cols="4" />
+                <field name="email_secundario" label="Email Secundario" presentation="text" actions="A|E" cols="4" />
+                <field name="pagina_web" label="Página WEB" presentation="text" actions="A|E" cols="4" />
+                <field name="redes_sociales" label="Redes Sociales" presentation="text" actions="A|E" cols="4" />
+                <field name="otros_contactos" label="Otros" presentation="textarea" actions="A|E" cols="4" />
+            </fieldset>
+            
+            <fieldset label="Ubicación">
+                <field name="domicilio_real" label="Domicilio Real" presentation="text" actions="A|E" cols="6" />
+                <field name="domicilio_legal" label="Domicilio Legal" presentation="text" actions="A|E" cols="6" />        
+                <field name="provincia" label="Provincia" presentation="provincias" actions="A|E" cols="6" />
+                <field name="localidad" label="Localidad" presentation="text" actions="A|E" cols="6" />        
+            </fieldset>     
+            
+        </tab>
+        
+        <tab label="Otros datos" id="otros_datos">
+            
+            <fieldset label="Fortalezas y Debilidades">
+                <field name="fortalezas" label="Fortalezas" presentation="textarea" actions="A|E" cols="12" />
+                <field name="debilidades" label="Debilidades" presentation="textarea" actions="A|E" cols="12" />
+            </fieldset>
+            
+            <fieldset label="Indicador de Representación Gremial">
+                <field name="indicador_gremial" label="Indicadores" presentation="textarea" actions="A|E" cols="12" rows="3"/>
+            </fieldset>
+            
+            <fieldset label="General">
+                <field name="dia_gremio" label="Día del Gremio" presentation="date" actions="A|E" cols="4" />
+                <field name="elecciones" label="Elecciones" presentation="date" actions="A|E" cols="4" />
+                <field name="mandato_actual" label="Mandato" presentation="text" actions="A|E" cols="4" />
+                <field name="cupo_femenino" label="Cupo Femenino" presentation="int" actions="A|E" cols="4" />
+            </fieldset>
+            
+        </tab>
+        
+        <tab label="Consejo Ejecutivo" id="comision">       
+            <table label="Autoridades" paginate="true" model="CamaraAutoridad" popup="true" >
+                <field name="nombre" label="Nombre" presentation="text" cols="6"/>
+                <field name="apellido" label="Apellido" presentation="text" cols="6"/>
+                <field name="cargo" label="Cargo" presentation="cargos_sindicato" cols="6" />
+            </table>
+        </tab>
+        
+        <tab label="Delegaciones" id="delegaciones">       
+            <table label="Delegaciones" paginate="true" model="CamaraDelegacion" popup="true" >
+                <field name="provincia" label="Provincia" presentation="provincias" cols="6"/>
+                <field name="localidad" label="Localidad" presentation="text" cols="6"/>
+                <field name="presidente" label="Presidente" presentation="text" cols="6" />
+                <field name="telefono" label="Telefono" presentation="text" cols="6" />
+                <field name="direccion" label="Direccion" presentation="text" cols="6" />
+                <field name="email" label="Email" presentation="text" cols="6" />
+                <field name="web" label="Web" presentation="text" cols="6" />
+            </table>
+        </tab>
+       
+        <tab label="Paritarias" id="paritarias">      
+            <fieldset>
+                <field name="acuerdo_salarial" label="Acuerdos Salariales" presentation="textarea" actions="A|E" cols="12" />
+            </fieldset>
+            <table label="Trayectoria de Paritarias" paginate="true" model="CamaraParitaria" popup="true" >
+                <field name="rubro" label="Rubro" presentation="text" cols="6"/>
+                <field name="fecha" label="Fecha" presentation="date" cols="6"/>
+                <field name="detalle" label="Detalle" presentation="text" cols="12"/>
+            </table>
+           
+        </tab>
+       
+    </tablemaint>
+
+</Camara>

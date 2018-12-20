@@ -40,6 +40,19 @@ class Sindicato extends AppModel {
         'dn_sexo',
         'dn_fecha_nac',
         'dn_fecha_venc',
+        'posicion_politica',
+        'oposicion_politica',
+        'fortalezas',
+        'debilidades',
+        'indicador_gremial',
+        'dia_gremio',
+        'elecciones',
+        'mandato_actual',
+        'cupo_femenino',
+        'q_afiliados',
+        'salario_minimo',
+        'salario_maximo',
+        'acuerdo_salarial',
     ];
 
     public function sindicatosestatutos() {

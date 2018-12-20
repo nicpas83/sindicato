@@ -9,7 +9,10 @@ class SindicatoPrestacion extends AppModel {
         'sindicato_id',
         'categoria',
         'prestacion',
-        
+    ];
+    protected $rules = [
+        'categoria' => 'required',
+        'prestacion' => 'required',
     ];
 
     public function sindicato() {

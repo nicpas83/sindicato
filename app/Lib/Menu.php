@@ -18,12 +18,12 @@ class Menu extends AbstractMenu {
             "controller" => "App\Http\Controllers\SindicatoController",
             "action" => "index",
         ],
-//        "camaras" => [
-//            "label" => "Camaras",
-//            "icon" => "users",
-//            "controller" => "App\Http\Controllers\CamaraController",
-//            "action" => "index",
-//        ],
+        "camaras" => [
+            "label" => "Camaras",
+            "icon" => "users",
+            "controller" => "App\Http\Controllers\CamaraController",
+            "action" => "index",
+        ],
         
         "admin" => [
             "label" => "Administración",

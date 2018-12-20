@@ -10,7 +10,6 @@ class PluralizationServiceProvider extends ServiceProvider {
     public function register() {
         Inflector::rules('plural', [
             'irregular' => [
-                'mutual' => 'mutuales',
                 'sindicatoestatuto' => 'sindicatosestatutos',
                 'sindicatomutual' => 'sindicatosmutuales',
                 'sindicatoadhesion' => 'sindicatosadhesiones',
@@ -19,11 +18,13 @@ class PluralizationServiceProvider extends ServiceProvider {
                 'sindicatoprestacion' => 'sindicatosprestaciones',
                 'sindicatobeneficio' => 'sindicatosbeneficios',
                 'sindicatoparitaria' => 'sindicatosparitarias',
+                'camaraautoridad' => 'camarasautoridades',
+                'camaradelegacion' => 'camarasdelegaciones',
+                'camaraparitaria' => 'camarasparitarias',
             ],
         ]);
         Inflector::rules('singular', [
             'irregular' => [
-                'mutuales' => 'mutual',
                 'sindicatosestatutos' => 'sindicatoestatuto',
                 'sindicatosmutuales' => 'sindicatomutual',
                 'sindicatosadhesiones' => 'sindicatoadhesion',
@@ -32,6 +33,10 @@ class PluralizationServiceProvider extends ServiceProvider {
                 'sindicatosprestaciones' => 'sindicatoprestacion',
                 'sindicatosbeneficios' => 'sindicatobeneficio',
                 'sindicatosparitarias' => 'sindicatoparitaria',
+                'camarasautoridades' => 'camaraautoridad',
+                'camarasdelegaciones' => 'camaradelegacion',
+                'camarasparitarias' => 'camaraparitaria',
+                
             ],
         ]);
     }

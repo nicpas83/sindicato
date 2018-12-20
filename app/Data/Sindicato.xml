@@ -150,7 +150,7 @@
             </table>
         </tab>
        
-        <tab label="Afiliados/Empleados" id="empleados">      
+        <tab label="Afiliados/Empleados" id="afiliados">      
             <fieldset label="General">
                 <field name="q_afiliados" label="Cantidad Afiliados" presentation="int" actions="A|E" cols="4" />
                 <field name="salario_minimo" label="Salario Mínimo" presentation="money" actions="A|E" cols="4" />
@@ -158,8 +158,8 @@
             </fieldset>
             
             <table label="Servicios o Prestaciones" paginate="true" model="SindicatoPrestacion" popup="true" >
-                <field name="categoria" label="Categoria" presentation="provincias" cols="6"/>
-                <field name="descripcion" label="Descripción" presentation="textarea" cols="6"/>
+                <field name="categoria" label="Categoria" presentation="categorias_prestacion" cols="6"/>
+                <field name="prestacion" label="Prestación" presentation="textarea" cols="6"/>
             </table>
             <table label="Beneficios" paginate="true" model="SindicatoBeneficio" popup="true" >
                 <field name="beneficio" label="Beneficio" presentation="text" cols="12"/>
@@ -171,7 +171,7 @@
                 <field name="acuerdo_salarial" label="Acuerdos Salariales" presentation="textarea" actions="A|E" cols="12" />
             </fieldset>
             <table label="Trayectoria de Paritarias" paginate="true" model="SindicatoParitaria" popup="true" >
-                <field name="rubro" label="Rubro" presentation="rubros_actividad" cols="6"/>
+                <field name="rubro" label="Rubro" presentation="text" cols="6"/>
                 <field name="fecha" label="Fecha" presentation="date" cols="6"/>
                 <field name="detalle" label="Detalle" presentation="text" cols="12"/>
             </table>

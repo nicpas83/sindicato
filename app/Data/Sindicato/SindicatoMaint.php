@@ -705,7 +705,7 @@ protected $data = array (
             'id' => 'filiales',
             'label' => 'Filiales',
         ),
-        'empleados' => 
+        'afiliados' => 
         array (
             'type' => 'tab',
             'blocks' => 
@@ -750,13 +750,13 @@ protected $data = array (
                         array (
                             'name' => 'categoria',
                             'label' => 'Categoria',
-                            'presentation' => 'provincias',
+                            'presentation' => 'categorias_prestacion',
                             'cols' => 6,
                         ),
                         1 => 
                         array (
-                            'name' => 'descripcion',
-                            'label' => 'Descripción',
+                            'name' => 'prestacion',
+                            'label' => 'Prestación',
                             'presentation' => 'textarea',
                             'cols' => 6,
                         ),
@@ -786,7 +786,7 @@ protected $data = array (
                     'type' => 'tablepopup',
                 ),
             ),
-            'id' => 'empleados',
+            'id' => 'afiliados',
             'label' => 'Afiliados/Empleados',
         ),
         'paritarias' => 
@@ -817,7 +817,7 @@ protected $data = array (
                         array (
                             'name' => 'rubro',
                             'label' => 'Rubro',
-                            'presentation' => 'rubros_actividad',
+                            'presentation' => 'text',
                             'cols' => 6,
                         ),
                         1 => 
